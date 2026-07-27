@@ -18,9 +18,7 @@ async def run_dubbing_pipeline(
     target_lang: str = Form(
         ..., description="Target ISO language code (e.g. 'es', 'fr')"
     ),
-    source_lang: str | None = Form(
-        None, description="Optional source language code"
-    ),
+    source_lang: str | None = Form(None, description="Optional source language code"),
     num_speakers: int | None = Form(None, description="Optional speaker count"),
     dubbing_pipeline: DubbingPipelineInterface = Depends(get_dubbing_pipeline),
 ):

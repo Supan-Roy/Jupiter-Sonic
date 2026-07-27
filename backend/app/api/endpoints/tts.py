@@ -11,7 +11,6 @@ from app.modules.base import TTSModuleInterface, TTSResult
 router = APIRouter()
 
 
-
 class TTSRequest(BaseModel):
     text: str = Field(..., description="Text content to synthesize into speech")
     voice_print_path: str = Field(

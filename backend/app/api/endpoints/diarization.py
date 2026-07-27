@@ -1,4 +1,3 @@
-
 from fastapi import APIRouter, Depends, File, Form, UploadFile
 
 from app.core.dependencies import get_diarization_module
