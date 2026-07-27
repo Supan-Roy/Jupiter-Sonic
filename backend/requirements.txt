@@ -1,0 +1,16 @@
+# FastAPI Framework & Server
+fastapi>=0.111.0
+pydantic>=2.7.4
+pydantic-settings>=2.3.4
+uvicorn[standard]>=0.30.1
+
+# Database
+sqlalchemy>=2.0.31
+
+# Form Uploads & Requests
+python-multipart>=0.0.9
+
+# Audio Processing
+soundfile>=0.12.1
+librosa>=0.10.2.post1
+numpy>=1.26.0

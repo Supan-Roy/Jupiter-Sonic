@@ -1,0 +1,46 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: jupiter_sonic_backend
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./backend:/app
+      - ./models:/models
+      - ./static/outputs:/app/static/outputs
+      - ./temp:/app/temp
+    env_file:
+      - .env
+    environment:
+      - ENV=development
+      - MODEL_DIR=/models
+      - DATABASE_URL=sqlite:////app/jupiter_sonic.db
+    restart: unless-stopped
+    networks:
+      - jupiter_sonic_net
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: jupiter_sonic_frontend
+    ports:
+      - "5173:5173"
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+    environment:
+      - VITE_API_URL=http://localhost:8000/api/v1
+    depends_on:
+      - backend
+    restart: unless-stopped
+    networks:
+      - jupiter_sonic_net
+
+networks:
+  jupiter_sonic_net:
+    driver: bridge
