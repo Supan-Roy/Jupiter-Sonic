@@ -1,7 +1,7 @@
 # Jupiter Sonic
 
 <p align="center">
-  <img src="logo.svg" width="120" alt="Jupiter Sonic Logo" />
+  <img src="frontend/public/logo.svg" width="120" alt="Jupiter Sonic Logo" />
 </p>
 
 Open-source speech intelligence platform for voice cloning, dubbing, and AI audio pipelines.
