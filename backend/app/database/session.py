@@ -1,5 +1,6 @@
 from sqlalchemy import create_engine
 from sqlalchemy.orm import declarative_base, sessionmaker
+
 from app.core.config import settings
 
 # SQLite argument configuration to prevent multiple thread access errors in development
@@ -11,6 +12,7 @@ engine = create_engine(settings.DATABASE_URL, connect_args=connect_args)
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 
 Base = declarative_base()
+
 
 def get_db():
     """Dependency for providing db session context to api routes."""

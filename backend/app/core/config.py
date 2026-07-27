@@ -1,8 +1,9 @@
 import json
 from pathlib import Path
-from typing import List, Union
+
 from pydantic import field_validator
 from pydantic_settings import BaseSettings, SettingsConfigDict
+
 
 class Settings(BaseSettings):
     ENV: str = "development"
@@ -13,11 +14,11 @@ class Settings(BaseSettings):
     HOST: str = "0.0.0.0"
     PORT: int = 8000
 
-    CORS_ORIGINS: Union[List[str], str] = []
+    CORS_ORIGINS: list[str] | str = []
 
     @field_validator("CORS_ORIGINS", mode="before")
     @classmethod
-    def assemble_cors_origins(cls, v: Union[str, List[str]]) -> Union[List[str], str]:
+    def assemble_cors_origins(cls, v: str | list[str]) -> list[str] | str:
         if isinstance(v, str) and not v.startswith("["):
             return [i.strip() for i in v.split(",")]
         elif isinstance(v, str) and v.startswith("["):
@@ -76,5 +77,6 @@ class Settings(BaseSettings):
         p = Path(self.TEMP_DIR)
         p.mkdir(parents=True, exist_ok=True)
         return p
+
 
 settings = Settings()
