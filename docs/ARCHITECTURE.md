@@ -1,4 +1,4 @@
-# Jupiter Sonic - Architecture & System Design 🪐🎙️
+# Jupiter Sonic - Architecture & System Design
 
 Jupiter Sonic is designed as a modular, local-first Speech Intelligence platform. The project avoids monolithic couplings to enable research, benchmarking, and quick substitutions of neural networks as open-source audio AI models advance.
 

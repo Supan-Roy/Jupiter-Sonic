@@ -1,4 +1,4 @@
-# Contributing to Jupiter Sonic 🪐🎙️
+# Contributing to Jupiter Sonic
 
 Thank you for your interest in contributing to Jupiter Sonic! We are building a modular, production-ready, fully local Speech Intelligence Platform.
 

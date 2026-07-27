@@ -1,6 +1,10 @@
-# Jupiter Sonic 🪐🎙️
+# Jupiter Sonic
 
-An open-source, fully local **Speech Intelligence Platform**.
+<p align="center">
+  <img src="logo.svg" width="120" alt="Jupiter Sonic Logo" />
+</p>
+
+Open-source speech intelligence platform for voice cloning, dubbing, and AI audio pipelines.
 
 Jupiter Sonic is an advanced audio intelligence toolkit and server engine designed for voice cloning, AI dubbing, speech recognition (ASR), speaker diarization, multilingual translation, and audio processing. The platform is designed from the ground up to run **100% locally** on your own hardware, ensuring complete privacy, zero external API costs, and full offline capability.
 
